@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes shadow {
+    0% {
+        height: 0px;
+        width: 0px;
+        margin-top: 0;
+        fill: #fff;
+    }
+
+    25% {
+        height: 30px;
+        width: 30px;
+        margin-top: 30vh;
+        fill: #fff;
+    }
+
+    50% {
+        height: 60px;
+        width: 60px;
+        margin-top: 60vh;
+        fill: #fff;
+    }
+
+    99% {
+        fill: #fff;
+
+    }
+
+    100% {
+        height: 100px;
+        width: 100px;
+        margin-top: 50vh;
+        fill: yellow;
+    }
+}
+
+.wrapper {
+    position: relative;
+    margin: 100px auto;
+}
+
+.box {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    box-sizing: border-box;
+}
+
+.green {
+    border: 1px solid green;
+}
+
+.box1 {
+    background-image: url(./box1.svg);
+}
+
+.box2 {
+    background-image: url(./box2.svg);
+}
+
+.wall {
+    background: url(./wall.svg) #888;
+}
+
+.man {
+    background-image: url(./man.svg);
+}
+
+.background {
+    display: none;
+    position: absolute;
+    background-color: #aaa;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.finish {
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    transform: translateY(-150%);
+    animation: shadow 1s linear forwards;
+}
+
+.finish path:last-of-type {
+    animation: shadow 1.2s cubic-bezier(1, 0, 1, 1) forwards;
+}
+
+.restart {
+    display: block;
+    margin: auto;
+    height: 34px;
+    width: 80px;
+    font-size: 14px;
+    background-color: #fff;
+}
